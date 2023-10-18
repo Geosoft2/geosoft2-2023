@@ -19,7 +19,51 @@ Fernerkundungsdaten können von unterschiedlichen Plattformen bezogen werden. Ei
 * Verschiedene Raumbezogene Daten aus Münster: [Open Data Münster](https://opendata.stadt-muenster.de) (Open Source) 
 <br/><br/>
 
-## **3. Einbindung der Daten in R**
+## **3. Packages**
+R bietet eine vielfältige Sammlung von Paketen, die speziell für die Verarbeitung und Analyse von Rasterdaten entwickelt wurden. Diese Pakete erweitern die Funktionalität von R und ermöglichen es den Anwendern, komplexe Analysen und Verarbeitungen durchzuführen. Im Folgenden werden einige der wichtigen Pakete vorgestellt, es gibt aber noch viele mehr:
+* Intallation & Einbindung:
+  * (Erstmalige) Installation erfolgt über den Befehl "install.packages("paket_name")"
+  * Jede Einbindung danach funktioniert durch "library(paket_name)"
+* Raster-Paket:
+  * Ermöglicht Lesen, Schreiben, Analysieren und Visualisieren von räumlichen Daten
+  * Fügt verschiedene Klassen, wie zum Beispiel "RasterLayer" und "RasterStack", zu R hinzu
+  * Wichtige Funktionen des Pakets:
+    * "raster()" - erzeugt ein neues RasterLayer-Objekt
+    * "brick()" - erzeugt ein neues RasterBrick-Objekt
+    * "stack()" - erzeugt ein neues RasterStack-Objekt
+    * "crop()" - Schneidet Rasterdaten auf gewünschte Größe zu
+    * "readRaster()", bzw. "writeRaster()" - Einlesen und Schreiben von Rasterdaten
+    * "cellStats()" - Zeigt gewüschte statistische Werte (z.B. "mean", oder "sd") zu den Rasterdaten an
+    * "plotRGB()" - Dient der Visualisierung von RasterBricks und RasterStacks
+ * Mapview-Paket:
+   * Ermöglicht die interaktive Visualisierung räumlicher Objekte in R
+   * Baut auf leaflet-Bibliothek auf und ermöglicht die Darstellung der Rasterdaten auf interaktiven Karten
+   * Wichtige Funktionen des Pakets:
+     * "mapview()" - Interaktive Darstellung räumlicher Objekte
+     * "addHomeButton()" - Ermöglicht das Einfügen eines Buttons, der beim Drücken die Karte auf eine eingestellte Höhe vergrößert
+     * "viewRGB()" - Ähnlich wie "mapview()", legt aber ein Echtfarbkomposit über die interaktive Karte
+     * "mapshot()" - Ermöglicht das Speichern von Mapviews (als .html-, .pdf-, .jpeg-Datei)
+ * rgdal-Paket:
+   * GDAL steht für "Geospatial Data Abstraction Library"
+     * rgdal ist die Schnittstelle zwischen R und der GDAL-Bibliothek, wobei GDAL eine Programmierbibliothek ist, die die Arbeit mit räumlichen Daten zu verschiedenen Schnittstellen (wie R) ermöglicht
+   * Wichtige Funktionen des Pakets:
+     * "readGDAL()" - Liest Rasterdaten ein als Objekt der Klasse "SpatialGrid" (nur einzelne Kanäle!)
+     * "writeGDAL()" - Schreibt Rasterdaten
+     * "spTransform()" - Konvertiert Rasterdaten zu anderen Koordinatensystemen
+     * "crs()" - Ermöglicht das Abfragen oder Setzen von Koordinatensystemen als Objekt anhand derer Rasterdaten konvertiert werden können
+* leaflet-Paket:
+  * Schnittstelle zur "leaflet" - Javascript Bibliothek, ermöglicht die Erstellung von interaktiven Webkarten und bietet grundlegende Funktion zur Darstellung von Geodaten
+  * Wichtige Funktionen des Pakets:
+    * "leaflet()" - Erstellt ein leeres Kartenobjekt
+    * "addTiles()" - Fügt eine Basiskarte hinzu
+    * "addMarkers()", "addPolygons()", "addCircles()" - ermöglicht es geographische Merkmale und Daten zur Karte hinzuzufügen
+    * "setView()" - legt die Karte auf einen bestimmten Punkt und Zoomlevel fest
+* Weitere interessante Pakete:
+  * sp: Bietet Klassen und Methoden zur räumlichen Datenanalyse
+  * terra: Der Nachfolger des "raster"-Pakets. Bietet schnellere und konsistentere Schnittstellen für Rasterdaten
+<br/><br/>
+
+## **4. Einbindung der Daten in R**
 Die Einbindung von Rasterdaten in R erfolgt über Funktionen aus dem Raster-Paket. Dabei gibt es unterschiedliche Arten von Rasterdatenformaten, wie zum Beispiel *.TIF -*, *.JP2 -* oder *.grd -* Dateien, die teilweise unterschiedlich eingebuden werden müssen.
 * Die Daten liegen oft als einzelne Dateien für die unterschiedlichen Kanäle (Rot, Grün, Blau, Nahesinfrarot, etc.) vor. Diese Kanäle können einzeln mit der *raster()*-Funktion eingebunden werden.
   * Beispiel: *nir <- raster("name_des_kanals")* würde einen Naheninfrarotkanal einbinden können. Dieser Kanal wird an die Variable *"nir"* gebunden und ist unter diesem Namen auch im Environment von R zu finden und kann darüber aufgerufen werden.
@@ -33,7 +77,7 @@ Die Einbindung von Rasterdaten in R erfolgt über Funktionen aus dem Raster-Pake
 <br/><br/>
 
  
-## **4. Datenanalyse**
+## **5. Datenanalyse**
 Um sich über die vorliegenden Fernerkundungsdaten einen Überblick zu verschaffen, können die Variablennamen aufgerufen werden, mit dem die Daten eingebunden sind.
   + Beispiel: *"nir"* eingeben, um Informationen über den zuvor eingebundenen Naheninfrarotkanal zu erhalten 
 <br/><br/>
@@ -75,7 +119,7 @@ Diese Informationen können bei der Ver- und Bearbeitung der Rasterdaten nützli
 Darüber hinaus ist es mit *summary(data)* möglich alle wichtigen statistischen Informationen der Daten zu erhalten
 <br/><br/>
 
-## **5. Visualisierung der Fernerkundungsdaten**
+## **6. Visualisierung der Fernerkundungsdaten**
 Die Visualisierung der Rasterdaten ist auf mehreren Arten möglich:
 * *plot()* ist eine Standardfunktion in R. Sie ist flexibel und kann leicht angepasst werden. Einen *RasterStack* plottet die Funktion allerdings nicht übereinander sondern nebeneinander. Somit ist es nicht möglich ein Echtfarb- oder Falschfarbkomposit auf diese Weise zu erstellen.
   * Beispiel: *plot(data)*, wobei *"data"* Beispielrasterdaten sind
@@ -90,7 +134,7 @@ Die Visualisierung der Rasterdaten ist auf mehreren Arten möglich:
   * Beispiel: Zuerst: *plostRGB(...)* und dann *legend("topleft", legend=c("Echtfarbkomposit von Münster"))*
 <br/><br/>
 
-## **6. Datenverarbeitung und Transformation**
+## **7. Datenverarbeitung und Transformation**
 Um mit den Rasterdaten zu arbeiten, kann man, je nachdem welches Ziel verfolgt wird und wie die Daten am Ende aussehen sollen, auf verschiedenen Arten vorgehen.
 * Ein einfaches Beispiel ist die Multiplikation aller Werte eines bestimmten Kanals:
   * Beispiel: nir_2 <- nir * 2, wobei *"nir"* in diesem Beispiel der Naheinfrarotkanal ist, der zuvor bereits eingebunden wurde.
@@ -108,7 +152,7 @@ Um mit den Rasterdaten zu arbeiten, kann man, je nachdem welches Ziel verfolgt w
   * Beispiel: *NDVI_glatt <- focal(NDVI, fun = median, w = matrix(1, nrow = 3, ncol = 3))*
 <br/><br/>
 
-## **7. Speichern**
+## **8. Speichern**
 Um die Ergebnisse als PDF oder JPG zu speichern, gibt es in RStudio Knöpfe für den Export. Rasterdaten und andere kompliziertere Dateiformate müssen meistens per Befehl im Skript, bzw. Konsole, gespeichert werden.
 * Das Speichern einer PDF-Datei wird eingeleitet durch den Befehl *pdf()*, der standardmäßig in R verfügbar ist. Auf dem Befehl folgt *was* gespeichert werden soll, also zum Beispiel die Anweisung *plott(data)*. Daraufhin kann das Speichern mit einem extra Befehl *dev.off()* beendet werden.
   1. *pdf("NDVI.pdf")*
@@ -122,3 +166,8 @@ Um die Ergebnisse als PDF oder JPG zu speichern, gibt es in RStudio Knöpfe für
 * Vorlesungsfolien: Meyer, Hannah: Fernerkundung und maschinelle Lernverfahren zur flächendeckenden Erfassung von Umweltvariablen. Teil 2: Fernerkundungsdaten in R.
 * [rspatial.org](https://rspatial.org/raster/rs/index.html)
 * [YouTube.com](https://www.youtube.com/watch?v=_nCUUBKKHsg)
+* [Wikipedia](https://de.wikipedia.org/wiki/Geospatial_Data_Abstraction_Library)
+* [Dokumentation des Mapview-Pakets](https://www.rdocumentation.org/packages/mapview/versions/2.11.0)
+* [Dokumentation des Raster-Pakets](https://www.rdocumentation.org/packages/raster/versions/3.6-23)
+* [Dokumentation des leaflet-Pakets](https://cran.r-project.org/web/packages/leaflet/index.html)
+* [Dokumentation des rgdal-Pakets](http://cran.nexr.com/web/packages/rgdal/index.html)
