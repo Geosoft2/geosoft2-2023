@@ -162,7 +162,7 @@ Um die Ergebnisse als PDF oder JPG zu speichern, gibt es in RStudio Knöpfe für
 * Das Speichern der Rasterdaten im Environment ist möglich durch die Funktion *writeRaster()*, die das zu speichernde Raster, den Speicherort, den Speichernamen und das Dateiformat erwartet.
   * Beispiel: *writeRaster(raster_daten, "ordner_name/raster_daten.grd")*
  
-## **8. Literaturverzeichnis**
+## **9. Literaturverzeichnis**
 * Vorlesungsfolien: Meyer, Hannah: Fernerkundung und maschinelle Lernverfahren zur flächendeckenden Erfassung von Umweltvariablen. Teil 2: Fernerkundungsdaten in R.
 * [rspatial.org](https://rspatial.org/raster/rs/index.html)
 * [YouTube.com](https://www.youtube.com/watch?v=_nCUUBKKHsg)
