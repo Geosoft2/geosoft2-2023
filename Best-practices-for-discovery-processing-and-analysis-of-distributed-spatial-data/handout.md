@@ -6,7 +6,7 @@ erstellt von @MinoruAmaya
 
 ### Was sind OGC-Standards?
 
-OGC steht für das Open Geospatial Consortium, eine Organisation, die Standards für den Austausch und die Nutzung von geografischen Daten entwickelt. OGC-Standards sind offizielle Spezifikationen, die von der Gemeinschaft der Geoinformatiker erarbeitet und verabschiedet wurden. Im OGC-Kontext ist ein Standard eine vereinbarte Spezifikation von Regeln und Richtlinien für die Implementierung von Softwareschnittstellen und Datenkodierungen Diese Standards legen fest, wie räumliche Daten im Internet ausgetauscht und genutzt werden können, um die Zusammenarbeit zwischen verschiedenen geografischen Informationssystemen zu erleichtern. Beispiele für OGC-Standards sind WMS (Web Map Service), WFS (Web Feature Service) und OGC API-Features.
+OGC steht für das Open Geospatial Consortium, eine Organisation, die Standards für den Austausch und die Nutzung von geografischen Daten entwickelt. OGC-Standards sind offizielle Spezifikationen, die von der Gemeinschaft der Geoinformatiker erarbeitet und verabschiedet wurden. Im OGC-Kontext ist ein Standard eine vereinbarte Spezifikation von Regeln und Richtlinien für die Implementierung von Softwareschnittstellen und Datenkodierungen Diese Standards legen fest, wie räumliche Daten im Internet ausgetauscht und genutzt werden können, um die Zusammenarbeit zwischen verschiedenen geografischen Informationssystemen zu erleichtern. Beispiele für OGC-Standards sind WMS (Web Map Service), WFS (Web Feature Service), WMTS (Web Map Tiles Service) und OGC API-Features.
 
 
 ### Was sind De-facto-Standards?
