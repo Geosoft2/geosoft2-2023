@@ -113,6 +113,7 @@ OGC-Api: https://ogcapi.ogc.org/
 
 Geodienste-Standards des OGC: https://www.geodaten.niedersachsen.de/startseite/gdi_standards/ogc_dienste_in_der_praxis/ogc-dienste-in-der-praxis-108069.html
 
+GDAL: https://gdal.org/
 
 
 
