@@ -1,4 +1,4 @@
-@MinoruAmaya
+erstellt von @MinoruAmaya
 
 # Best practices for discovery, processing and analysis of distributed spatial data
 ## OGC-Standards vs. De-facto-Standards
@@ -16,14 +16,7 @@ De-facto-Standards sind Lösungen, Technologien, Produkte oder Protokolle, die s
 
 ### Warum brauchen wir Standards im Bereich räumlicher Daten?
 
-Standards ermöglichen die Interoperabilität zwischen verschiedenen GIS-Systemen, Anwendungen und Datenquellen. Ohne klare Standards könnten räumliche Daten schwer miteinander kommunizieren, was den Datenaustausch und die Zusammenarbeit erschweren würde.
-
-
-
-
-
-
-
+Standards ermöglichen die Interoperabilität zwischen verschiedenen GIS-Systemen, Anwendungen und Datenquellen. Ohne klare Standards könnten räumliche Daten schwer miteinander kommunizieren, was den Datenaustausch und die Zusammenarbeit erschweren würde. Außerdem erleichtern sie die Integration verschiedener Datenquellen, sei es geografische Vektordaten, Rasterdaten, Aonaordaten oder Medaten. Ebenfalls können die Entwickler durch die Einhaltung von Standards sicherstellen, dass ihre Anwendungen und Dienste reibungslos mit anderen Systemen zusammenarbeiten können. Standards schaffen außerdem eine Grundlage für Innovationen, da sie Entwicklern ermöglichen, auf bewährten Technologien aufzubauen und neue Ideen zu entwickeln, ohne von Grund auf neu beginnen zu müssen.
 
 
 ### Vor- und Nachteile im Bereich räumlicher Daten
@@ -45,11 +38,48 @@ De-facto-Standards bieten untereinander einheitliche und weiterhin unterstütze 
 De-facto-Standards haben nicht die offizielle Unterstüzung und Überwachung einer formellen Norm, was bedeutet, dass es keine Garantie für Qualität oder Zuverlässigkeit gibt und die Norm jederzeit veraltet oder durch eine neue Technologie ersetzt werden kann.
 
 
+### Beliebte Beispiele der Standards
+
+**OGC-Standards:**
+
+WMS (Web Map Service): Ein OGC-Standard, der die Bereitstellung von Kartenbildern über das Internet ermöglicht. Es spezifiziert, wie Karten in verschiedenen Formaten abgerufen und angezeigt werden können.
+
+WFS (Web Feature Services): Diese ermöglicht den Zugriff auf geografische Vektordaten über das Internet. WFS definiert, wie Features (Objekte wie Punkte, Linien und Polygone) abgefragt und manipuliert werden können.
+
+**De-facto-Standards:**
+GDAL (Geospatial data abstraction library): Eine Bibliothek für die Übersetzung und Manipulation von räumlichen Datenformaten. GDAL hat sich als weit verbreiteter Standard für die Arbeit mit geografischen Daten etabliert.
+
+GeoJSON: Ein offenes, textbasiertes Datenformat für die Repräsentation von geografischen Datenobjekten. GeoJSON ist einfach zu verwenden und hat sich als De-facto-Standard für den Austausch von räumlichen Daten in Webanwendungen durchgesetzt. 
+
+STAC (Spatio Temporal Asset Catalog): Obwohl es sich in der Entwicklung befindet, könnte STAC bald als De-facto-Standard für die Katalogisierung von räumlichen und zeitlichen Vermögenswerten, insbesondere Satellitenbildern, fungieren.
 
 
 
 
 
+
+### Literaturverzeichnis
+
+Arten von OGC-Standards:https://opengeospatial.github.io/e-learning/ogc-standards/text/services-ogc.html#types-of-standards
+
+Wie kann man OGC-Standards besser verwenden: https://www.linkedin.com/advice/0/how-can-you-use-ogc-standards-better-7nl6f
+
+Definition OGC-Standards: 
+https://opengeospatial.github.io/e-learning/ogc-standards/text/services-ogc.html
+https://www.ogc.org/standards/
+https://opengeospatial.github.io/e-learning/ogc-standards/text/services-ogc.html#types-of-standards
+
+Definition De-facto-Standards: 
+https://wirtschaftslexikon.gabler.de/definition/de-facto-standard-31199
+https://datei.wiki/definition/verstaendnis-von-de-facto-normen/
+
+GIS-Standards: https://www.gistandards.eu/de/gis-standards/
+
+Build interoperable, geospatial, solutions with OGC standards: https://developer.ogc.org/#learn
+
+OGC-Api: https://ogcapi.ogc.org/
+
+Geodienste-Standards des OGC: https://www.geodaten.niedersachsen.de/startseite/gdi_standards/ogc_dienste_in_der_praxis/ogc-dienste-in-der-praxis-108069.html
 
 
 
