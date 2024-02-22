@@ -37,21 +37,53 @@ De-facto-Standards bieten untereinander einheitliche und weiterhin unterstütze 
 
 De-facto-Standards haben nicht die offizielle Unterstüzung und Überwachung einer formellen Norm, was bedeutet, dass es keine Garantie für Qualität oder Zuverlässigkeit gibt und die Norm jederzeit veraltet oder durch eine neue Technologie ersetzt werden kann.
 
+### Wann nutzt man OGC-Standards?
+Wenn die Interoperabilität zwischen verschiedenen GIS-Systemen und Datenquellen von höchster Bedeutung ist, sind OGC-Standards die richtige Wahl. Diese bieten klare Spezifiktaionen und fördern einheitliche Standards für den Austausch räumlicher Daten. In Szenarien, in denen branchenübergreifende Zusammenarbeit und der Autausch von geografischen Informationen mit verschiedenen Organisationen erforderlich sind, bieten OGC-Standards eine solide Grundlage. Wenn zum Beispiel langfristige Stabilität und Planung wichtig sind, sind OGC-Standards die bevorzugte Wahl. Diese Standards werden von einer formellen Organisation verwaltet und haben einen etablierten Entwicklungsprozess. 
 
-### Beliebte Beispiele der Standards
+### Wann nutzt man De-facto-Standards?
+Wenn eine schnelle Entwicklung und Implementierung erforderlich sind, können De-facto-Standards wie GDAL oder GeoJSON effizienter sein. Diese Lösungen sind oft durch Bedürfnisse, Erfahrungen und Beiträgen aus der Praxis gewachsen und werden von Entwicklern gut angenommen. Wenn eine Lösung bereits weit verbreitet und von der Entwicklergemeinschaft aktzeptiert ist, kann die Nutzung eines De-facto-Standards Zeit sparen und eine breitere Anwenderbasis haben. In Fällen, in denen spezifische Anforderungen oder Anwendungsfälle flexiblere Lösungen erfordern, können De-facto-Standards besser geeignet sein. Sie neigen dazu, einfacher und anpassungsfähiger zu sein.
+
+In einigen Fällen kann eine Kombination beider Standards die beste lösung sein.
+
+
+
+
+
+
+### Gegenüberstellung der beliebten Arten der beiden Standardsformen
 
 **OGC-Standards:**
 
-WMS (Web Map Service): Ein OGC-Standard, der die Bereitstellung von Kartenbildern über das Internet ermöglicht. Es spezifiziert, wie Karten in verschiedenen Formaten abgerufen und angezeigt werden können.
+WMS (Web Map Service): 
++ Ein OGC-Standard, der die Bereitstellung von Kartenbildern über das Internet ermöglicht. Es spezifiziert, wie Karten in verschiedenen Formaten abgerufen und angezeigt werden können.
++ Die Datenart ist in Form von Rasterdaten (Kartenbilder).
++ Die Interaktion verläuft über die einfache Darstellung von Karten für den Nutzer.
 
-WFS (Web Feature Services): Diese ermöglicht den Zugriff auf geografische Vektordaten über das Internet. WFS definiert, wie Features (Objekte wie Punkte, Linien und Polygone) abgefragt und manipuliert werden können.
+WFS (Web Feature Services): 
++ Diese ermöglicht den Zugriff auf geografische Vektordaten über das Internet. WFS definiert, wie Features (Objekte wie Punkte, Linien und Polygone) abgefragt und manipuliert werden können.
++ Die Datenart ist in Form von Vektordaten (Features wie Punkte, Linien, Polygone).
++ Die Interaktion verläuft über eine Abfrage und Manipulation von Vektordaten.
 
 **De-facto-Standards:**
-GDAL (Geospatial data abstraction library): Eine Bibliothek für die Übersetzung und Manipulation von räumlichen Datenformaten. GDAL hat sich als weit verbreiteter Standard für die Arbeit mit geografischen Daten etabliert.
+GDAL (Geospatial data abstraction library): 
++ Eine Bibliothek für die Übersetzung und Manipulation von räumlichen Datenformaten. GDAL hat sich als weit verbreiteter Standard für die Arbeit mit geografischen Daten etabliert.
++ Die Datenart ist in Form von Rasterdaten und Vektordaten.
++ Die Interaktion verläuft über die Verwendung für Datenzugriff und -verarbeitung von dem Entwickler.
 
-GeoJSON: Ein offenes, textbasiertes Datenformat für die Repräsentation von geografischen Datenobjekten. GeoJSON ist einfach zu verwenden und hat sich als De-facto-Standard für den Austausch von räumlichen Daten in Webanwendungen durchgesetzt. 
+GeoJSON: 
++ Ein offenes, textbasiertes Datenformat für die Repräsentation von geografischen Datenobjekten. GeoJSON ist einfach zu verwenden und hat sich als De-facto-Standard für den Austausch von räumlichen Daten in Webanwendungen durchgesetzt.
++ Die Datenart ist in Form von Vektordaten in JSON-Format.
++ Die Interaktion verläuft über den einfachen Austausch von geografischen Daten zwischen Webanwendungen.
 
-STAC (Spatio Temporal Asset Catalog): Obwohl es sich in der Entwicklung befindet, könnte STAC bald als De-facto-Standard für die Katalogisierung von räumlichen und zeitlichen Vermögenswerten, insbesondere Satellitenbildern, fungieren.
+STAC (Spatio Temporal Asset Catalog): 
++ Obwohl es sich in der Entwicklung befindet, könnte STAC bald als De-facto-Standard für die Katalogisierung von räumlichen und zeitlichen Vermögenswerten (Datensätze, die in einem STAC-Katalog katalogisiert und beschrieben werden), insbesondere Satellitenbildern, fungieren.
++ Die Datenart ist in Form von Metadaten über räumliche und zeitliche Vermögenswerte.
++ Die Interaktion vereinfacht den Austausch und die Suche nach Satellitendaten.
+
+
+### Zusammenfassung der Gegenüberstellung
+
+In Betracht der Nutzung und des Zweckes sind WMS und WFS ideal für die Bereitstellung und Abfrage von geografischen Daten in GIS-Anwendungen. GeoJSON dient als einfacher Datenaustauschformat für Vektordaten, gut geeignet für Webanwendungen. Darüber hinaus fokussiert sich STAC auf die Katalogisierung und Beschreibung von räumlichen und zeitlichen Vermögenswerte, vorallem Satellitenbilder. GDAL ist dagegen eine Bibliothek für Datenübersetzung und -manipulation, weit verbreitet in der räumlichen Datenverarbeitung, welches ebenfalls sich gut eignet für webbasierte Anwendungen und Datenverarbeitungen.
 
 
 
