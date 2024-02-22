@@ -14,6 +14,18 @@ OGC steht für das Open Geospatial Consortium, eine Organisation, die Standards 
 De-facto-Standards sind Lösungen, Technologien, Produkte oder Protokolle, die sich in der Praxis weit verbreitet haben und allgemein akzeptiert sind. Obwohl es nicht von einer bestimmten Organisation formal standardisiert wurde, wird es weitgehend akzeptiert und genutzt, was es zu einem De-facto-Standard macht. Sie entstehen oft durch die weitreichende Nutzung und Akzeptanz bestimmter Technologien oder Lösungen in der Branche. De-facto-Standards können in verschiedenen Bereichen auftreten, einschließlich Softwareentwicklung, Datenverarbeitung und -analyse. Beispiele für De-facto-Standards sind QWERTZ-Tastaturformat, MPEG-4-Videoformat und die HTML-Websprache. Im Bereich räumlicher Daten sind GDAL (Geospatial Data Abstraction Library), SpatiaLite und STAC (SpatioTemporal Asset Catalog) ebenfalls De-facto-Standards.
 
 
+### Warum brauchen wir Standards im Bereich räumlicher Daten?
+
+Standards ermöglichen die Interoperabilität zwischen verschiedenen GIS-Systemen, Anwendungen und Datenquellen. Ohne klare Standards könnten räumliche Daten schwer miteinander kommunizieren, was den Datenaustausch und die Zusammenarbeit erschweren würde.
+
+
+
+
+
+
+
+
+
 ### Vor- und Nachteile im Bereich räumlicher Daten
 **Vorteile von OGC-Standards:**
 
@@ -31,6 +43,8 @@ De-facto-Standards bieten untereinander einheitliche und weiterhin unterstütze 
 **Nachteile von De-facto-Standards:**
 
 De-facto-Standards haben nicht die offizielle Unterstüzung und Überwachung einer formellen Norm, was bedeutet, dass es keine Garantie für Qualität oder Zuverlässigkeit gibt und die Norm jederzeit veraltet oder durch eine neue Technologie ersetzt werden kann.
+
+
 
 
 
