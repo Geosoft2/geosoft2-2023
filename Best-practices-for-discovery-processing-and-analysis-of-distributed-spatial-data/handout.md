@@ -1,4 +1,5 @@
 erstellt von @MinoruAmaya
+git tag handout-submission-LenaLong
 
 # Best practices for discovery, processing and analysis of distributed spatial data
 ## OGC-Standards vs. De-facto-Standards
